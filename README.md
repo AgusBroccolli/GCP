@@ -20,4 +20,8 @@ Una vez implementado Jenkins, procedemos a la implementación de una app Node.js
 2-	Asignar el rol correspondiente a la Service Account de Jenkins, en producción siempre mantener la buena práctica de dar el mínimo privilegio necesario.
 3-	Guardar las credenciales de la Service Account descargadas dentro de las credenciales globales de Jenkins.
 4-	Creamos el job para el pipeline en Jenkins donde incluiremos el jenkinsfile con los stage necesarios para el deployment como son el checkout, el build, el push de la imagen y por ultimo el deploy en GKE
-![image](https://user-images.githubusercontent.com/76749404/178363715-1182cf8b-5b3c-4424-b935-d28a7714ac01.png)
+
+Generar ingress:
+
+1- Generamos nuestro recurso del service en un file .yml (en este caso es el internal-ingress.yml)
+2- Una vez creado, aplicamos el recurso al cluster de EKS creado anteriormente.
